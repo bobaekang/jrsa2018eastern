@@ -1,0 +1,204 @@
+---
+title: "CHRI subpopulation analysis:<br>Real-world examples and more"
+subtitle: "2018 Eastern Regional Training Institute for SACs, JRSA"
+author: "Bobae Kang, Illinois SAC"
+date: "December 5, 2018"
+output:
+  revealjs::revealjs_presentation:
+    center: true
+    transition: concave
+    incremental: false
+    css: ./css/style.css
+    reveal_options:
+      slideNumber: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+##
+```{r out.extra='style="display: block; margin: auto"'}
+knitr::include_graphics("image/icjia_org.png")
+```
+<br>
+<p class="caption">More on Illinois SAC: http://www.icjia.state.il.us/research/overview</p>
+
+## This presentation is . . .
+* To share our experience, not establish rules
+* Focused on study design, not results
+* Opinionated, not neutral
+<br><br>
+<p class="caption">Slides available at https://bobaekang.github.io/jrsa2018eastern/slides</p>
+
+
+# Example 1:<br>First-time firearm offenders {data-background-image="image/background1.jpg"}
+
+##
+<span style="font-size: .8em; color: #466c8c; font-style: italic;">\#2016-BJ-CX-K024</span>
+<div style="font-size: 1.4em">
+How do first-time firearm offenders<br>
+behave differently?
+</div>
+
+## Highlights
+* Sample construction
+    * Coarsened exact matching
+* Combining multiple data sources
+    * More nuanced "time to event"
+
+##
+```{r out.extra='style="display: block; margin: auto"'}
+knitr::include_graphics("image/pt1_sample1.png")
+```
+<p class="caption">Example 1: Sample construction</p>
+
+##
+```{r out.extra='style="display: block; margin: auto"'}
+knitr::include_graphics("image/pt1_sample2.png")
+```
+<p class="caption">Example 1: Sample construction</p>
+
+##
+```{r out.extra='style="display: block; margin: auto"'}
+knitr::include_graphics("image/pt1_cem.png")
+```
+<p class="caption">Example 1: Coersened exact matching (<a href="https://medium.com/@devmotivation/cem-coarsened-exact-matching-explained-7f4d64acc5ef">@devmotivation 2017</a>)</p>
+
+##
+```{r out.extra='style="display: block; margin: auto"'}
+knitr::include_graphics("image/pt1_data.png")
+```
+<p class="caption">Example 1: Multiple data sources</p>
+
+## {data-transition="concave-in fade-out"}
+```{r}
+knitr::include_graphics("image/pt1_tte1.png")
+```
+<p class="caption">Example 1: Time to event</p>
+
+## {data-transition="fade"}
+```{r}
+knitr::include_graphics("image/pt1_tte2.png")
+```
+<p class="caption">Example 1: Time to event</p>
+
+## {data-transition="concave-out fade-in"}
+```{r}
+knitr::include_graphics("image/pt1_tte3.png")
+```
+<p class="caption">Example 1: Time to event</p>
+
+
+# Example 2:<br>Registered sex offenders {data-background-image="image/background2.jpg"}
+
+##
+<span style="font-size: 0.8em; color: #466c8c; font-style: italic;">\#2017-BJ-CX-K016</span>
+<div style="font-size: 1.3em">
+Who are the registered sex offenders?<br>
+What does their criminal history look like?
+</div>
+
+## Highlights
+* Sex Offender Registry (SOR) table
+* Combining multiple data sources
+    * More nuanced "current residence"
+* Criminal history analysis group
+    * Finding the "registering event"
+
+##
+```{r out.extra='style="display: block; margin: auto"'}
+knitr::include_graphics("image/pt2_sor.png")
+```
+<p class="caption">Example 2: SOR table</p>
+
+##
+```{r out.extra='style="display: block; margin: auto"'}
+knitr::include_graphics("image/pt2_data.png")
+```
+<br>
+<p class="caption">Example 2: Multiple data sources</p>
+
+## {data-transition="concave-in fade-out"}
+```{r out.width="90%", out.extra='style="display: block; margin: auto"'}
+knitr::include_graphics("image/pt2_cor_now1.png")
+```
+<p class="caption">Example 2: Current residence</p>
+
+## {data-transition="concave-out fade-in"}
+```{r out.width="90%", out.extra='style="display: block; margin: auto"'}
+knitr::include_graphics("image/pt2_cor_now2.png")
+```
+<p class="caption">Example 2: Current residence</p>
+
+##
+```{r out.extra='style="display: block; margin: auto"'}
+knitr::include_graphics("image/pt2_analysis_group.png")
+```
+<p class="caption">Example 2: Crinimal history analysis group</p>
+
+##
+```{r out.extra='style="display: block; margin: auto"'}
+knitr::include_graphics("image/pt2_registering_event.png")
+```
+<br>
+<p class="caption">Example 2: Identifying the "registering event"</p>
+
+
+# Programmatic approach<br>to research {data-background-image="image/background3.jpg"}
+
+##
+<div style="font-size: 1.4em">
+A programmatic approach to research<br>
+relies on <span style="color:red;"><i>computer programs</i></span><br>
+to <span style="color:red;"><i>organize</i></span> and <span style="color:red;"><i>carry out</i></span><br>
+research tasks.
+</div>
+
+## Key benefits
+* Automation
+* Flexibility
+* Reproducibility
+* Version-control
+
+## Basic workflow
+1. Set up a research project directory
+2. Write and run computer programs to
+    * obtain datasets
+    * prepare clean datasets
+    * conduct analyses
+    * generate reports
+3. Submit reports
+
+##
+```{r out.width="65%", out.extra='style="display: block; margin: auto"'}
+knitr::include_graphics("image/pt3_file_structure.png")
+```
+<p class="caption">Research directory example</p>
+
+## {data-transition="concave-in fade-out"}
+```{r out.extra='style="display: block; margin: auto"'}
+knitr::include_graphics("image/Rlogo.png")
+```
+
+## {data-transition="concave-out fade-in"}
+```{r out.width="80%", out.extra='style="display: block; margin: auto"'}
+knitr::include_graphics("image/r_can_do_with_words.png")
+```
+
+##
+<div style="font-size: 1.2em">
+https://bobaekang.github.io/icjia-r-workshop/
+</div>
+
+# Thank you :) {data-background="white"}
+
+##
+<span style="font-size: 0.8em; color: #466c8c; font-style: italic;">References</span>
+<br><br>
+
+<div style="font-size: 0.6em">
+* devmotivation. (2017, April 18). CEM: Coarsened Exact Matching Explained [Medium]. Retrieved from https://medium.com/@devmotivation/cem-coarsened-exact-matching-explained-7f4d64acc5ef
+* Iacus, S., King, G., & Porro, G. (n.d.). CEM: Coarsened Exact Matching Software. Retrieved from https://gking.harvard.edu/cem
+* Kang, B. (2018, March 14). R Workshop Module 1: Introduction to R. Retrieved from https://bobaekang.github.io/icjia-r-workshop/notes/module1_notes.html
+</div>
